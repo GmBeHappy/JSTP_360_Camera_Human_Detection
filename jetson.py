@@ -56,10 +56,10 @@ class DetectorAPI:
         self.default_graph.close()
 
 if __name__ == "__main__":
-    model_path = '/content/drive/MyDrive/faster_rcnn_nas_coco_2018_01_28/frozen_inference_graph.pb'
+    model_path = '/home/gm/JSTP_360_Camera_Human_Detection/pre_train/frozen_inference_graph.pb'
     odapi = DetectorAPI(path_to_ckpt=model_path)
     threshold = 0.7
-    cap = cv2.VideoCapture('/content/drive/MyDrive/jstp-test-video/test2560x1280.mp4')
+    cap = cv2.VideoCapture('/home/gm/JSTP_360_Camera_Human_Detection/test2560x1280.mp4')
     out = cv2.VideoWriter('outputInf2560x1280.mp4', 0x7634706d, 20.0, (2560,1280))
     while True:
         ret, img = cap.read()
