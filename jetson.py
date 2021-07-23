@@ -1,10 +1,8 @@
 
 import numpy as np
-import tensorflow.compat.v1 as tf
-print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
+import tensorflow as tf
 import cv2
 import time
-from google.colab.patches import cv2_imshow
 
 class DetectorAPI:
     def __init__(self, path_to_ckpt):
