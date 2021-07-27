@@ -87,6 +87,10 @@ if __name__ == "__main__":
 
     out.release()
     cv2.destroyAllWindows()
-    print("All time :", time.time()-all_time)
+    seconds = time.time()-all_time
+    m, s = divmod(seconds, 60)
+    h, m = divmod(m, 60)
+    print("All time : ")
+    print('{:d}:{:02d}:{:02d}'.format(h, m, s))
         
         
