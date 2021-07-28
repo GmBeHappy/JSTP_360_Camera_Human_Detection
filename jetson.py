@@ -61,8 +61,8 @@ if __name__ == "__main__":
     odapi = DetectorAPI(path_to_ckpt=model_path)
     threshold = 0.7
     all_time = time.time()
-    cap = cv2.VideoCapture('/home/gm/JSTP_360_Camera_Human_Detection/test2560x1280.mp4')
-    out = cv2.VideoWriter('outputInf2560x1280.mp4', 0x7634706d, 20.0, (2560,1280))
+    cap = cv2.VideoCapture('/home/gm/JSTP_360_Camera_Human_Detection/test1920x960.mp4')
+    out = cv2.VideoWriter('output1920x960.mp4', 0x7634706d, 20.0, (1920,960))
     while True:
         ret, img = cap.read()
         if ret==True:
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     print(seconds)
     m, s = divmod(seconds, 60)
     h, m = divmod(m, 60)
-    print("All time : ")
+    print("\nAll time : ")
     print(f'{h:d}:{m:02d}:{s:02d}')
         
         
